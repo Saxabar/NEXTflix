@@ -16,16 +16,16 @@ It has two parts:
 Requirements: a ZX Spectrum Next with NextZXOS (tested with 2.08 and 2.09); Windows with the
 .NET Framework 4 (already there on Windows 10 and 11).
 
-Download: `NEXTflix-1.0.zip` from the [Releases](https://github.com/Saxabar/NEXTflix/releases) page.
+Download: `NEXTflix-1.1.zip` from the [Releases](https://github.com/Saxabar/NEXTflix/releases) page
+(what's new: [CHANGELOG](CHANGELOG.md)).
 
 <table>
   <tr>
     <td width="50%"><img src="screens/list-bubble-bobble.png" alt="The list of the games"></td>
-    <td width="50%"><img src="screens/list-dizzy.png" alt="Another game"></td>
+    <td width="50%" rowspan="2"><img src="screens/real-next.jpg" alt="NEXTflix on a real ZX Spectrum Next"></td>
   </tr>
   <tr>
     <td width="50%"><img src="screens/choose-file.png" alt="Choosing the file of a compilation"></td>
-    <td width="50%"><img src="screens/real-next.jpg" alt="NEXTflix on a real ZX Spectrum Next"></td>
   </tr>
 </table>
 
@@ -91,6 +91,7 @@ starting at power on, delete or rename `c:/nextzxos/autoexec.bas` (e.g. from the
 | Previous / next letter | cursor left / right | left / right |
 | First game with a letter | the letter | |
 | Start the game | ENTER, SPACE | fire (Mega Drive pad: A) |
+| Start a tape or snapshot asking again how | SYMBOL SHIFT + ENTER | |
 | Add / remove the game to / from the favourites | SYMBOL SHIFT + F | Mega Drive pad: B |
 | All the games / only the favourites | SYMBOL SHIFT + V | Mega Drive pad: START |
 | Information | EDIT (CAPS SHIFT + 1) | Mega Drive pad: C |
@@ -100,13 +101,14 @@ Joysticks work in the mode set on the Next: Kempston, Mega Drive, Sinclair or Cu
 
 Favourite games have a star in the list. They are kept in `FAVS.TXT` in the menu folder (the
 folders of the games, one per line), so they stay when you run NEXTflix-Prepare again.
+NEXTflix starts on the last game you started (kept in `LAST.TXT` in the menu folder).
 
 Starting the games:
 
 - `.nex` with `.nexload`, `.snx` with `SPECTRUM`, BASIC with `LOAD`.
 - `.tap` and `.sna`: with the Tape Loader and the Snapshot Loader of NextZXOS. The first time they
   ask how to start (128K, 48K, ... or ENTER), then they remember it and the game starts at once.
-  To change it, press SYM SHIFT + ENTER on the file in the Browser.
+  To change it, press SYMBOL SHIFT + ENTER on the game in NEXTflix (or on the file in the Browser).
 - Z-machine adventures (`.z3` .. `.z8`): with ZXZVM, which must be in
   `C:/games/Z-Machine/zxzvm` as on the standard SD card of the Next.
 
