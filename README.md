@@ -114,6 +114,51 @@ Starting the games:
 
 To come back to the menu after a game, reset the Next (with the autoexec it starts again).
 
+## Without NEXTflix-Prepare (Mac, Linux, by hand)
+
+The Releases page also has `NEXTflix-1.1-next.zip`, with only the files of the menu:
+`NEXTFLIX.DOT`, `OSLOAD.BAS` and `ZVM.BAS`. Copy them into a folder of the SD card (e.g.
+`/NEXTFLIX`) and write the list of the games there, `GAMES.IDX`, with a text editor. To update
+only the menu, copy the three files over the old ones: the list and the favourites stay.
+
+`GAMES.IDX` is plain text (ASCII), one item a line:
+
+- the folder of the games on the SD card, from the root, e.g. `/GAMES/`;
+- the number of games;
+- then, for each game:
+  - the title shown in the menu;
+  - its folder, inside the folder of the games;
+  - its picture, relative to its folder, or an empty line for none;
+  - the number of files that start it (more than one: the menu asks which one);
+  - one line for each of them: a letter for the kind, then the file, relative to the folder of
+    the game: `N` for `.nex`, `S` for `.snx` and `.sna`, `T` for `.tap`, `B` for a BASIC program
+    (saved with `LINE`, so that it starts by itself), `Z` for a Z-machine story (`.z3` .. `.z8`).
+
+For example, with `Bomb Jack` and `The Elves Of Maroland` in `/GAMES/`:
+
+```
+/GAMES/
+2
+Bomb Jack
+Bomb Jack
+BombJack.nlp
+1
+NBombJack.nex
+The Elves Of Maroland
+The Elves Of Maroland
+
+2
+TPART1/MAR1.tap
+TPART2/MAR2.tap
+```
+
+Keep the games in alphabetical order (the letter keys expect it). Lines may end with CR, CR LF or
+LF. Up to 400 games and 48 files a game; titles up to 32 characters (20 shown in the list).
+
+The pictures (`.nlp`) are 128x96 pixels, 12288 bytes: the rows from the top, one byte a pixel
+in the default colours of the Next (RRRGGGBB). NEXTflix-Prepare makes them from the CSpect
+screenshots; without them the menu shows *No picture*.
+
 ## Support
 
 NEXTflix is free, and it will stay free. If it brings your games back to life and you want to
