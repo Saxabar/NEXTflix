@@ -1,0 +1,20 @@
+NEXTflix - games menu for the ZX Spectrum Next
+Copyright (C) 2026 Giuseppe Papa. All rights reserved.
+
+NEXTflix is freeware: NEXTflix-Prepare.exe and the files it writes for the Next (NEXTFLIX.DOT,
+OSLOAD.BAS, ZVM.BAS).
+
+1. You may use NEXTflix free of charge.
+
+2. You may copy and distribute the NEXTflix package freely, as long as it is complete and
+   unmodified (with this licence and the README) and you do not ask money for it.
+
+3. The source code is not distributed.
+
+4. NEXTflix is provided "as is", without warranty of any kind. The author is not liable for any
+   damage or loss of data coming from its use. Keep a copy of your SD card and of your games.
+
+The menu is built with z88dk (https://github.com/z88dk/z88dk). Tapes, snapshots and Z-machine
+stories are started with the loaders of NextZXOS and with ZXZVM, which are on the SD card of the
+Next and are not part of NEXTflix. ZX Spectrum Next is a trademark of SpecNext Ltd; NEXTflix is
+not affiliated with it.
