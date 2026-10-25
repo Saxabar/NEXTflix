@@ -18,9 +18,16 @@ Requirements: a ZX Spectrum Next with NextZXOS (tested with 2.08 and 2.09); Wind
 
 Download: `NEXTflix-1.0.zip` from the [Releases](https://github.com/Saxabar/NEXTflix/releases) page.
 
-![The list of the games](screens/list-bubble-bobble.png) ![Another game](screens/list-dizzy.png)
-
-![Choosing the file of a compilation](screens/choose-file.png) ![The information box](screens/info.png)
+<table>
+  <tr>
+    <td width="50%"><img src="screens/list-bubble-bobble.png" alt="The list of the games"></td>
+    <td width="50%"><img src="screens/list-dizzy.png" alt="Another game"></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="screens/choose-file.png" alt="Choosing the file of a compilation"></td>
+    <td width="50%"><img src="screens/real-next.jpg" alt="NEXTflix on a real ZX Spectrum Next"></td>
+  </tr>
+</table>
 
 ## 1. Prepare the SD card
 
@@ -48,8 +55,6 @@ folders:
 
 Then press **Prepare**. The window remembers the folders for the next time.
 
-![NEXTflix-Prepare](screens/prepare.png)
-
 - Run it again after adding or changing games: only what changed is copied. The games folder on
   the PC is never modified.
 - The menu folder gets `NEXTFLIX.DOT`, the list of the games `GAMES.IDX` and two small loaders,
@@ -62,8 +67,12 @@ Then press **Prepare**. The window remembers the folders for the next time.
 
 From the **Browser** of NextZXOS: open the menu folder (e.g. `NEXTFLIX`) and choose `NEXTFLIX.DOT`.
 
-To start it **at power on**, choose NextBASIC from the main menu of NextZXOS and type these two
-lines (ENTER after each). NEXTflix-Prepare shows them with your menu folder; for `E:\NEXTFLIX`:
+To start it **at power on**, tick *Start NEXTflix at power on* in NEXTflix-Prepare before pressing
+Prepare (it is off at every start): it writes `NEXTZXOS\AUTOEXEC.BAS` on the SD card, and keeps an
+autoexec of yours as `NEXTZXOS\AUTOEXEC.OLD`.
+
+Or do it on the Next: choose NextBASIC from the main menu of NextZXOS and type these two lines
+(ENTER after each). NEXTflix-Prepare shows them with your menu folder; for `E:\NEXTFLIX`:
 
 ```
 10 CD "c:/nextflix": ../nextflix.dot
@@ -81,11 +90,16 @@ starting at power on, delete or rename `c:/nextzxos/autoexec.bas` (e.g. from the
 | Previous / next game | cursor up / down | up / down |
 | Previous / next letter | cursor left / right | left / right |
 | First game with a letter | the letter | |
-| Start the game | ENTER, SPACE | fire (Mega Drive pad: A or B) |
-| Information | EDIT (CAPS SHIFT + 1) | Mega Drive pad: START |
-| Back to NextZXOS | BREAK (CAPS SHIFT + SPACE) | Mega Drive pad: C |
+| Start the game | ENTER, SPACE | fire (Mega Drive pad: A) |
+| Add / remove the game to / from the favourites | SYMBOL SHIFT + F | Mega Drive pad: B |
+| All the games / only the favourites | SYMBOL SHIFT + V | Mega Drive pad: START |
+| Information | EDIT (CAPS SHIFT + 1) | Mega Drive pad: C |
+| Back to NextZXOS | BREAK (CAPS SHIFT + SPACE) | |
 
 Joysticks work in the mode set on the Next: Kempston, Mega Drive, Sinclair or Cursor.
+
+Favourite games have a star in the list. They are kept in `FAVS.TXT` in the menu folder (the
+folders of the games, one per line), so they stay when you run NEXTflix-Prepare again.
 
 Starting the games:
 
